@@ -147,8 +147,9 @@
 
 </head>
 <body>
-  <h1>이건 네 결정이 아니다</h1>
-  <p>그냥 따라오면 됩니다</p>
+  <h1 id="title"></h1>
+  <p id="subtitle"></p>
+
 
   <button onclick="start()">시작하기</button>
 
@@ -158,5 +159,54 @@
       location.href = "situation.html";
     }
   </script>
+  <script>
+const copies = [
+  {
+    title: "생각하지 마세요.",
+    subtitle: "이미 늦었습니다."
+  },
+  {
+    title: "뇌를 잠시 꺼두세요.",
+    subtitle: "제가 대신 굴려드립니다."
+  },
+  {
+    title: "판단 금지 구역",
+    subtitle: "여기선 고민하면 반칙입니다."
+  },
+  {
+    title: "결정 능력 휴무",
+    subtitle: "오늘은 쉽니다."
+  },
+  {
+    title: "아무 생각 없이 들어오셨죠?",
+    subtitle: "아주 잘하셨어요."
+  },
+  {
+    title: "이 버튼을 누르면",
+    subtitle: "모든 게 제 책임입니다."
+  },
+  {
+    title: "선택을 포기하십시오.",
+    subtitle: "저항은 무의미합니다."
+  },
+  {
+    title: "당신의 판단을",
+    subtitle: "압수합니다."
+  },
+  {
+    title: "오늘도 결정 못 한 채",
+    subtitle: "여기까지 오셨군요."
+  },
+  {
+    title: "고민하다가",
+    subtitle: "여기 온 거 다 압니다."
+  }
+];
+
+// 새로고침할 때 랜덤 카피 적용
+const random = copies[Math.floor(Math.random() * copies.length)];
+document.getElementById("title").innerText = random.title;
+document.getElementById("subtitle").innerText = random.subtitle;
+</script>
 </body>
 </html>
